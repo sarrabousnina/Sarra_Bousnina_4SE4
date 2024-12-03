@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -21,6 +22,6 @@ public class Instructor implements Serializable {
     private String firstName;
     private String lastName;
     private LocalDate dateOfHire;
-    @OneToMany
-    List<Course> courses;
+    @OneToMany()
+    Set<Course> courses;
 }
